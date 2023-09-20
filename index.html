@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"
+</head>
+
+<body>
+
+    <!-- ========announcement section=============== -->
+
+    <div class="container mt-5">
+        <h2>ANNOUNCEMENT</h2>
+        <div>
+        <div class="announcement-list mt-3">
+        <button class="button float-right" id="openPopupBtn">Create Announcement</button>
+            <div>
+                <h4>This is an announcement already exist</h4>
+                <p>This is the content of the announcement that I wanted to display.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, ullam
+                </p>
+                <h4>This is second announcement</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa enim quam fugiat. Perspiciatis architecto cupiditate laborum error, praesentium veniam, tempora doloremque voluptatibus asperiores maiores magnam. Corporis esse eum iure aliquid veritatis qui, explicabo, atque nemo maiores totam velit nesciunt, vel quod perspiciatis perferendis eligendi eaque officia rem distinctio voluptatibus in.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div class="modal" id="announcementModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create Announcement</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="announcementHeading">Heading:</label>
+                        <input type="text" class="form-control" id="announcementHeading">
+                    </div>
+                    <div class="form-group">
+                        <label for="announcementDescription">Description:</label>
+                        <textarea class="form-control" id="announcementDescription" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="saveAnnouncement">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========links section=============== -->
+
+    <div class="container mt-5">
+        <h2>LINKS</h2>
+        <div class="link-list mt-3">
+        <button class="button float-right" id="addLinkBtn">Add Link</button>
+
+            <!-- Links will be added here -->
+            <div>
+                <a href="#" target="_blank">LINK1</a>
+                <button class="float-right delete-link" data-url="#"><i class="ri-delete-bin-line"></i></button>
+
+            </div>
+            <div>
+                <a href="https://www.google.com/" target="_blank">https://www.google.com/</a>
+                <button class="float-right delete-link" data-url="https://www.google.com/"><i class="ri-delete-bin-line"></i></button>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- Link Modal -->
+    <div class="modal" id="linkModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Link</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="linkUrl">URL:</label>
+                        <input type="url" class="form-control" id="linkUrl">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="saveLink">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ====== upload files section ============== -->
+
+<div class="container mt-5">
+    <h2>Files</h2>
+    <button class="button float-right" id="uploadFileBtn">Upload File</button>
+    <input type="file" id="fileInput" style="display: none;" accept=".pdf, .doc, .docx, .txt, .jpg, .jpeg, .png">
+    <div class="file-list mt-3">
+        <!-- Uploaded files will be displayed here -->
+    </div>
+</div>
+
+<!-- File Modal -->
+<div class="modal" id="fileModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Upload File</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="file" id="fileToUpload" accept=".pdf, .doc, .docx, .txt, .jpg, .jpeg, .png">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="saveFile">Upload</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
